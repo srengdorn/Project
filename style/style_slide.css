@@ -1,0 +1,160 @@
+@charset "utf-8";
+/* CSS Document */
+
+/** slide */
+#slide{
+padding:0px;
+position: relative;
+}
+#slideshow-container{	
+	max-width:960px;
+	height:400px;
+	padding:0px;
+	position:relative;
+	overflow:hidden;
+	border: 1px solid lightgray;
+	background-color: white;
+}
+#slideshow-container:hover .next{
+	visibility: visible;
+}
+#slideshow-container:hover .back{
+	visibility: visible;
+}
+#mySlide-img-box{
+	width:960px;
+	height:400px;
+	display:table-cell;
+	vertical-align:middle;
+	position: relative;
+}
+#slide_num{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	color: dimgray;
+	font-size: 12px;
+}
+#slide-title{
+	padding: 10px;
+	color: dimgray;
+	position: absolute;
+	top: 15%;
+	left:3%;
+}
+#slide-title h1{
+	padding: 0px;
+	margin: 0px;
+	color: #9E0104;
+	font-weight:bold;
+	font-size: 22px;
+}
+#slide-title p{
+	font-size: 14px;
+}
+#mySlide-img-box img{
+	max-width:100%;
+	max-height:100%;
+	margin: auto;
+	display:block;
+}
+.next {
+	width: 40px;
+	position: absolute;
+	right: 0px;
+	top: 1px;
+	cursor: pointer;
+	background-color: green;
+	color: white;
+	text-align: center;
+	padding: 8px;
+}
+.back {
+	width: 40px;
+	position: absolute;
+	right: 41px;
+	top: 1px;
+	cursor: pointer;
+	background-color:green;
+	color: white;
+	text-align: center;
+	padding: 8px;
+}
+.next:hover, .back:hover{
+	opacity: 0.8;
+}
+/* Fading animation */
+.fade1 {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+/* Large desktop */
+@media (min-width: 991px) and (max-width: 1300px) {
+	#slideshow-container
+	{	
+	height:350px;
+	}	
+	#mySlide-img-box{
+	height:350px;	
+	}			
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 991px) 
+{
+	#slideshow-container
+	{	
+	height:300px;
+	border: none;
+	}	
+	#mySlide-img-box{
+	height:300px;	
+	}		
+}
+/* landscape phone */
+@media (min-width: 480px) and (max-width: 767px) 
+{
+	#slide
+	{
+	padding:0px;
+	}
+	#slideshow-container
+	{	
+	height:250px;
+	border:none;
+	}	
+	#mySlide-img-box{
+	height:250px;	
+	}	
+}
+/* Portrait phone */
+@media (max-width: 479px) 
+{
+	#slide
+	{
+	padding:0px;
+	}
+	#slideshow-container
+	{	
+	height:180px;
+	border: none;
+	}	
+	#mySlide-img-box{
+	height:180px;	
+	}
+	
+	
+}
+
+
